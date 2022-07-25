@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
 
-const userSchema = mongoose.SchemaType({
+const userSchema = mongoose.Schema({
   name: {
     type: String,
     maxlength: 50,
   },
   email: {
     type: String,
-    /*빈칸(공백) 삭제*/ trim: true,
+    trim: true,
     unique: 1,
   },
   password: {
@@ -27,7 +27,7 @@ const userSchema = mongoose.SchemaType({
     type: String,
   },
   tokenExp: {
-    /* 토큰 유효기간 */ type: SVGAnimatedNumberList,
+    type: Number,
   },
 });
 
